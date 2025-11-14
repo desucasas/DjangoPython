@@ -1,19 +1,19 @@
-import calculadora as c
+from calculadora import calculadora1
 
 #Instanciação do objeto
-circulo = c.calculadora()
+#Circulo = c.calculadora()
 
 #Entrada de Dados
 raio = float(input("Digite o valor do raio:"))
 
 #Processamento de Dados
-circunferencia = circulo.circunferencia(raio)
-area = circulo.area(raio)
+circunferencia = calculadora1.circunferencia(raio)
+area = calculadora1.area(raio)
 
 #Saída de Dados
 print(f'''Circunferência: {circunferencia:.2f}
     Area: {area:2f}
-    PI: {circulo.PI}
+    PI: {calculadora1.PI}
 ''')
       
 
