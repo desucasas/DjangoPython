@@ -9,7 +9,7 @@ class Retangulo:
 #Propriedade da base
     @property #Pegar o valor do atributo base
     def base(self):
-        pass
+        return self.__base
     @base.setter #Definir o valor do atributo base
     def base(self, base:float):
         self.__base = base
@@ -19,7 +19,7 @@ class Retangulo:
     def altura(self):
         return self.__altura
     @altura.setter #Definir o valor do atributo alura
-    def altura(self, altura:float)
+    def altura(self, altura:float):
         self.__altura = altura
 
 #3º Membro - Construtor
@@ -29,14 +29,14 @@ class Retangulo:
 
 #4º Membro - Métodos
     def area(self) -> float:
-        return self.altura() *self.base()
+        return self.altura * self.base
     
     def perimetro(self) -> float:
-        return (self.altura() * 2) + (self.base() *2)
+        return (self.altura * 2) + (self.base * 2)
     
     def diagonal(self) -> float:
         from math import sqrt, pow
-        return sqrt(pow(self.base(), 2) + pow(self.altura(), 2))
+        return sqrt(pow(self.base, 2) + pow(self.altura, 2))
     
     def dadosRetangulo(self) -> str:
         saida = f'''Area = {self.area()}\n Perimetro = {self.perimetro()}\n Diagonal = {self.diagonal()}'''
