@@ -1,0 +1,56 @@
+@startuml
+' Configuração da aparência para melhor clareza
+skinparam classAttributeIconSize 0
+
+title Diagrama de Classes: Sistema de Cálculo de Imposto
+
+' 1. CLASSE ABSTRATA: Contribuinte
+abstract class Contribuinte {
+    ' Atributos protegidos (Encapsulamento - representado pelo #)
+    # _nome : str
+    # _renda_anual : float
+    
+    -- Propriedades Públicas --
+    + nome : str <<property>>
+    + renda_anual : float <<property>>
+    
+    -- Métodos --
+    + __init__(nome, renda_anual)
+    ' Método abstrato (força implementação nas filhas - Abstração/Polimorfismo)
+    + {abstract} calcular_imposto() : float
+}
+
+' 2. CLASSE FILHA: PessoaFisica
+class PessoaFisica {
+    ' Atributo específico (Encapsulamento)
+    # _gastos_saude : float
+    
+    -- Propriedade Pública --
+    + gastos_saude : float <<property>>
+    
+    -- Métodos --
+    + __init__(nome, renda_anual, gastos_saude)
+    ' Implementação do Polimorfismo
+    + calcular_imposto() : float
+}
+
+' 3. CLASSE FILHA: PessoaJuridica
+class PessoaJuridica {
+    ' Atributo específico (Encapsulamento)
+    # _num_funcionarios : int
+    
+    -- Propriedade Pública --
+    + num_funcionarios : int <<property>>
+    
+    -- Métodos --
+    + __init__(nome, renda_anual, num_funcionarios)
+    ' Implementação do Polimorfismo
+    + calcular_imposto() : float
+}
+
+' Relações: Herança (Generalização)
+' A seta com o triângulo indica que a subclasse herda da superclasse
+Contribuinte <|-- PessoaFisica
+Contribuinte <|-- PessoaJuridica
+
+@enduml
