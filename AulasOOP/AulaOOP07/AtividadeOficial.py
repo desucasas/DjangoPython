@@ -1,7 +1,11 @@
 from abc import ABC, abstractmethod
 
-#Classe Principal
-class Contribuinte:
+#Super Classe
+class Contribuinte(ABC):
+    __nome:str
+    __renda_anual:float
+
+@property
     def __init__(self, nome:str, renda_anual:float):
         self._nome = nome
         self._renda_anual = renda_anual
