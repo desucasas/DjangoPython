@@ -1,15 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
+a = "Senai"
 def home(request):
     return render (request, "home.html", context=
-                   {'nome': 'Receitas Django',                       
+                   {'nome': 'a',                       
                    })
-
-def sobre(request):
-    return HttpResponse("Sobre Nós")
-
-def receita(request):
-    return HttpResponse("As Receitas")
 
 # Create your views here.
