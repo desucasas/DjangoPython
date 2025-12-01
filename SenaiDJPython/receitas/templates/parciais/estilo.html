@@ -11,6 +11,7 @@
         background: whitesmoke;
     }
 
+
     .principal-cabecalho-container {
         background-color: #13141f;
         padding: 2rem 0;
@@ -66,13 +67,19 @@
     }
 
     .principal-conteudo-container {
-        padding-top: 0;
+        padding-top: 5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        justify-content: center;
+        gap: 2rem;
     }
 
     .principal-conteudo-lista {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
         gap: 2rem;
+        padding: 2rem;
+        justify-content: center;
         background: white;
         max-width: 64rem;
         box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
@@ -87,40 +94,51 @@
 
     .receita-card {
         max-width: 100%;
-        height: 330px;
+        height: auto;
+        width: 100%;
     }
 
     .receita-card img {
-        width: 20%;
+        width: 100%;
+    }
+
+    .receita-titulo {
+        font-size: 2.4rem;
+        margin: 1.6rem;
+        margin-bottom: 0;
     }
 
     .receitas-autor {
-        display: flex;
+        display: block;
         flex-wrap: wrap;
-        gap: 1.6rem;
-        margin: 0 1.6rem 1.6rem 1.6rem;
         font-size: 1.4rem;
-        color: rgb(85, 85, 85);
-
+        color: #555;
     }
 
     .receita-meta {
         display: flex;
         background: #ccc;
-        padding: 1.6rem 17rem;
+        border-top: black 2px solid;
+        text-align: center;
+        text-wrap: nowrap;
+        justify-content: space-around;
     }
 
     .receitas-footer {
         text-align: center;
         margin-top: 0rem;
-        padding-bottom: 2rem;
+        padding: 1rem;
         background: #13141f;
-        text-decoration: none;
-        padding: 1.6rem 16rem;
-
     }
 
-    .temp {
-        background: red;
+    .footer-senai a,
+    .copyright {
+        color: white;
+        text-decoration: none;
+        font-size: 1.4rem;
+    }
+
+    .footer-senai a:hover {
+        text-decoration: underline;
     }
 </style>
