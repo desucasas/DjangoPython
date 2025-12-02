@@ -6,4 +6,9 @@ def home(request):
                    {'nome': a,                       
                    })
 
+def home(request):
+    return render (request, 'page/receita-view.html', context=
+                   {'nome': a,                       
+                   })
+
 # Create your views here.
